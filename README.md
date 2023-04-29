@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+###
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi all! Multisender is a simple utility that will help you send multiple transactions at once on the testnet. The contract is deployed at the address bebra.huterok228.testnet. I did it on my knee, sorry 😋😋😁😁😉😉
 
 ## Available Scripts
 
