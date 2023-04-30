@@ -25,17 +25,20 @@ export const parseTransactions = (
       return;
     }
 
-    let attached_deposit = parseFloat(
-      parsed[1].trim().replace(",", ".").replace(" ", "")
-    );
-    const amount = convertToYocto(attached_deposit).toString(10);
+    let attached_deposit = parsed[1].trim().replace(",", ".").replace(" ", "");
+    if (!/[0-9].?[0-9]?/.test(attached_deposit)) {
+      alert("You entered the wrong value!!!");
+      return;
+    }
+    let parsed_attached_deposit = parseFloat(attached_deposit);
+    const amount = convertToYocto(parsed_attached_deposit).toString(10);
 
     const transaction: Transaction = {
       address,
       amount,
     };
 
-    total += attached_deposit;
+    total += parsed_attached_deposit;
 
     parsedTransactions.push(transaction);
   }
